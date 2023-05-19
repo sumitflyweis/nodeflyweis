@@ -19,7 +19,7 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyparser.urlencoded({ extended: true }));
 
-const PORT =  2006;
+const PORT = process.env.PORT || 2006;
 
 
 app.get("/home",(req, res) => {
@@ -30,7 +30,7 @@ app.get("/home",(req, res) => {
 
 
 app.listen(PORT, () => {
-  console.log(`listening on port `);
+  console.log(`listening on port ${PORT}`);
 });
 
 module.exports = {
