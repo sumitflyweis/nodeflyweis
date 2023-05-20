@@ -2,7 +2,7 @@
 
 const payment = require("../model/model");
 const nodemailer = require("nodemailer");
-var XMLHttpRequest = require("xhr2");
+// var XMLHttpRequest = require("xhr2");
 
 module.exports.addContactData = async (req, res) => {
   const { name, email, phone, subject, message } = req.body;
@@ -34,12 +34,12 @@ module.exports.addContactData = async (req, res) => {
       }
     });
 
-    let xhr = new XMLHttpRequest();
-    xhr.open("post", "/addContactData");
-    xhr.setRequestHeader("content-type", "application/json");
-    xhr.onload = function () {
-      console.log(xhr.responseText);
-    };
+    // let xhr = new XMLHttpRequest();
+    // xhr.open("post", "/addContactData");
+    // xhr.setRequestHeader("content-type", "application/json");
+    // xhr.onload = function () {
+    //   console.log(xhr.responseText);
+    // };
 
     return res.status(200).json({ msg: "Message send successfully" });
   } catch (error) {
