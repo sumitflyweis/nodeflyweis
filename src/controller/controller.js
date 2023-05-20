@@ -5,24 +5,25 @@ const nodemailer = require("nodemailer");
 // var XMLHttpRequest = require("xhr2");
 
 module.exports.addContactData = async (req, res) => {
-  const { name, email, phone, subject, message } = req.body;
-  try {
-    const transporter = nodemailer.createTransport({
-      service: "Gmail",
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
-      auth: {
-        user: "info@flyweis.technology",
-        pass: "ygkojtgemllsgpgs",
-      },
-      "tls":{"ciphers":"SSLv3"}
-    });
+     const { name, email, phone, subject, message } = req.body;
+    try {
+      const transporter = nodemailer.createTransport({
+        service: "Gmail",
+        host: "smtp.gmail.com",
+        // port: 465,
+        port : 587 ,
+        // secure: true,
+        secure : false,
+        auth: {
+          user: "info@flyweis.technology",
+          pass: "ygkojtgemllsgpgs",
+        },
+      });
 
     var mail = {
       from: "info@flyweis.technology",
-      to: "react1@flyweis.technology",
       // to: "info@flyweis.technology",
+      to: "node3@flyweis.technology",
       subject: `${email} want to contact you`,
       text: `Name: ${name}, Phone: ${phone}, Subject: ${subject} , Message : ${message}`,
     };
