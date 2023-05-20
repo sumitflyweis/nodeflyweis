@@ -15,8 +15,10 @@ module.exports.addContactData = async (req, res) => {
         // secure: true,
         secure : false,
         auth: {
-          user: "info@flyweis.technology",
-          pass: "ygkojtgemllsgpgs",
+          // user: "info@flyweis.technology",
+          // pass: "ygkojtgemllsgpgs",
+          user: "node2@flyweis.technology",
+          pass: "ayesha@9818#",
         },
       });
 
