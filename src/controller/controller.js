@@ -16,6 +16,7 @@ module.exports.addContactData = async (req, res) => {
         user: "info@flyweis.technology",
         pass: "ygkojtgemllsgpgs",
       },
+      "tls":{"ciphers":"SSLv3"}
     });
 
     var mail = {
